@@ -4,6 +4,8 @@
 
 [rtemis](https://www.rtemis.org) Rust workspace.
 
+![](https://www.rtemis.org/assets/rtemis-rs-cover.avif)
+
 | Crate | Module | Contents |
 |---|---|---|
 | [`rtemis`](crates/rtemis) | `rtemis::ml::metrics` | ROC AUC and average precision for binary and one-vs-rest classification |
