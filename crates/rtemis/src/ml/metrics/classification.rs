@@ -11,7 +11,11 @@
 use std::fmt;
 
 /// Error returned when the input of a metric is inconsistent.
+///
+/// The enum is `#[non_exhaustive]`: a `match` on it outside this crate
+/// includes a wildcard arm, and a new variant is a compatible addition.
 #[derive(Debug, Clone, PartialEq, Eq)]
+#[non_exhaustive]
 pub enum MetricError {
     /// `scores` has `found` elements where `expected` are required: one per
     /// reference label, or one per reference label and class for a one-vs-rest
