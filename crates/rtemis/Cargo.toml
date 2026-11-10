@@ -1,0 +1,14 @@
+[package]
+name = "rtemis"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.63"
+description = "Machine learning metrics: ROC AUC and average precision for binary and multiclass classification"
+license = "BSD-3-Clause"
+repository = "https://github.com/rtemis-org/rtemis-rs"
+homepage = "https://www.rtemis.org"
+readme = "README.md"
+keywords = ["machine-learning", "metrics", "auc", "classification", "statistics"]
+categories = ["science", "mathematics", "algorithms"]
+
+[dependencies]
