@@ -1,22 +1,15 @@
 # rtemis
 
-Platform-independent core of [rtemis](https://www.rtemis.org): machine learning
-metrics with no dependencies beyond the Rust standard library.
+Platform-independent core of [rtemis](https://www.rtemis.org): machine learning metrics with no dependencies beyond the Rust standard library.
 
 ## Classification metrics
 
-`rtemis::ml::metrics::classification` computes the area under the ROC curve (AUC)
-and average precision (AP) for binary outcomes, and their one-vs-rest values
-for each class of a multiclass outcome.
+`rtemis::ml::metrics::classification` computes the area under the ROC curve (AUC) and average precision (AP) for binary outcomes, and their one-vs-rest values for each class of a multiclass outcome.
 
-- The AUC is the probability that a randomly chosen positive case scores
-  higher than a randomly chosen negative case, with ties counted as one half.
-- The AP is the area under the stepwise precision-recall curve, with each
-  distinct score as one threshold.
+- The AUC is the probability that a randomly chosen positive case scores higher than a randomly chosen negative case, with ties counted as one half.
+- The AP is the area under the stepwise precision-recall curve, with each distinct score as one threshold.
 
-Scores are sorted once per problem, after which each metric is one linear
-pass. Extra memory is 8 bytes per case. Reference labels are a slice of any
-type with equality, so bindings pass their own arrays without copying.
+Scores are sorted once per problem, after which each metric is one linear pass. Extra memory is 8 bytes per case. Reference labels are a slice of any type with equality, so bindings pass their own arrays without copying.
 
 ```rust
 use rtemis::ml::metrics::classification::{average_precision, roc_auc, roc_auc_ovr};
